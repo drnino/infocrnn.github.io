@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="description" content="Explicacion red neural convolucional recurrente" />
+          <!-- Latest compiled and minified CSS -->
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+          <!-- FontAwsome CDN -->
+          <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+          <!-- main css -->
+          <link rel="stylesheet" href="
+                /Users/admin/Fundacion_Dominguez_Batista/epsilon_beta_technologies/01_Proyectos/a1_covid_predictor/static/css/exp.css">
+          <!-- titulo -->
+          <title>Predictor Covid | Explicación</title>
+  </head>
+
+  <body>
+          <!-- Main Header -->
+          <header>
+            <div class="jumbotron jumbotron-fluid">
+              <div class="container push-spaces">
+                <h1 class="display-4">Modelo de Red Neural Convolucional Recurrente</h1>
+                <h2 class="lead hide-sm">Creado por: Dr. Saturnino Domínguez C, M.D, MSc</h2>
+              </div>
+            </div>
+          </header>
+          <!--/ Main Header -->
+
+          <!-- Navbar -->
+          <nav id="navbar-example2" class="navbar navbar-light bg-light mt-0">
+            <a class="navbar-brand">CNN-RNN</a>
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link" href="#uno">FrontEnd</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#dos">BackEnd</a>
+              </li>
+            </ul>
+          </nav>
+          <!--/ Navbar -->
+
+          <!-- Main Container -->
+          <div class="conteiner-fluid  h-100 p-3 mb-2">
+          <div class="accordion h-100 justify-content-center align-items-center bg-light" id="accordionExample">
+            <!-- 1 -->
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-success text-center" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <h3 class="card-header bg-success">Deployment</h3>
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseOne" class="collapse collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <div class="" id="item-1">
+                        <p>Todos los archivos una vez se completó el entrenamiento del modelo de la red Neural
+                        fueron subidos a un nuevo repository en github y posteriormente se realiza el
+                        deployment a un servidor online optimizado para archivos en phyton.</p>
+                        <img src="/Users/admin/Fundacion_Dominguez_Batista/epsilon_beta_technologies/01_Proyectos/a1_covid_predictor/static/img/aa.png" alt="" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/ 1 -->
+              <!-- 2 -->
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button class="btn btn-success text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <h3 class="card-header bg-success">Serialización y Deserialización</h3>
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <p>La serialización y deserialización del modelo se realiza mediante la librería
+                    pickle con la finalidad de mantener un archivo comprimido del modelo entrenado.</p>
+                    <img src="/Users/admin/Fundacion_Dominguez_Batista/epsilon_beta_technologies/01_Proyectos/a1_covid_predictor/static/img/ab.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <!--/ 2 -->
+              <!-- 3 -->
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button class="btn btn-success text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <h3 class="card-header bg-success">Aplicación del modelo con la información</h3>
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <p>Una vez deserializado el modelo para su uso recibe la información proveniente
+                    del cuestionario que se expresa en la página web. En este paso el objetivo
+                  es obtener datos en forma de una matriz cuyas dimensiones correspondan al input del modelo.
+                Luego se utiliza un hash table para contrastar la información de la matriz unidimensional obtenida del
+                  formulario con el resultado del modelo preentrenado y así mantener el menor tiempo posible en la obtención
+                de las respuestas. Posteriormente el resultado se carga nuevamente en la página inicial.</p>
+                    <img src="/Users/admin/Fundacion_Dominguez_Batista/epsilon_beta_technologies/01_Proyectos/a1_covid_predictor/static/img/ac.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <!--/ 3 -->
+              <!-- 4 -->
+              <div class="card">
+                <div class="card-header" id="headingcuatro">
+                  <h2 class="mb-0">
+                    <button class="btn btn-success text-center collapsed" type="button" data-toggle="collapse" data-target="#collapsecuatro" aria-expanded="false" aria-controls="collapsecuatro">
+                      <h3 class="card-header bg-success">Front-End a Back-End</h3>
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapsecuatro" class="collapse" aria-labelledby="headingcuatro" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <p>Para convertir la información obtenida del formulario inicial se utiliza una aplicación en flask
+                    que posteriormente es la que se utilizará como input para el modelo de red neural.</p>
+                    <img src="/Users/admin/Fundacion_Dominguez_Batista/epsilon_beta_technologies/01_Proyectos/a1_covid_predictor/static/img/ad.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <!--/ 4 -->
+              <!-- 5 -->
+              <div class="card">
+                <div class="card-header" id="headingcinco">
+                  <h2 class="mb-0">
+                    <button class="btn btn-success text-center collapsed" type="button" data-toggle="collapse" data-target="#collapsecinco" aria-expanded="false" aria-controls="collapsecinco">
+                      <h3 class="card-header bg-success">Inicio del Sistema</h3>
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapsecinco" class="collapse" aria-labelledby="headingcinco" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <p>Para reducir la complejidad de la utilización de la red neural se creó una página web única con un formulario
+                    que solo tiene valores preestablecidos de sí y no, lo que evita las posibles complicaciones asociadas a
+                  la libertad del usuario de intriducir valores aleatorios. Y posteriormente el resultado de la predicción de la red neural se
+                presenta en la misma página de forma sencilla.</p>
+                    <img src="/Users/admin/Fundacion_Dominguez_Batista/epsilon_beta_technologies/01_Proyectos/a1_covid_predictor/static/img/ae.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <!--/ 5 -->
+              <!-- 6 -->
+              <div class="card">
+                <div class="card-header" id="headingsix">
+                  <h2 class="mb-0">
+                    <button class="btn btn-success text-center collapsed" type="button" data-toggle="collapse" data-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                      <h3 class="card-header bg-success">Verificación del modelo</h3>
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <p>Una vez el modelo alcanza un área bajo la curva mayor o igual a 99.6% utilizando la base de datos inicial
+                    ( de entrenamiento y prueba) el modelo preeliminar es expuesto a una nueva base de datos hasta el momento desconocida
+                  y es evaluada nuevamente su sensibilidad y especificidad. Si los resultados no son satisfactorios el modelo
+                preeliminar es nuevamente preentrenado recalibrando el peso de cada input utilizando el algoritmo que creamos para
+              reentrenamiento no supervisado hasta lograr los resultados esperados.Luego el modelo es exportado y subido al servidor
+              para su uso.</p>
+                    <img src="/Users/admin/Fundacion_Dominguez_Batista/epsilon_beta_technologies/01_Proyectos/a1_covid_predictor/static/img/af.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <!--/ 6 -->
+              <!-- 7 -->
+              <div class="card">
+                <div class="card-header" id="headingseven">
+                  <h2 class="mb-0">
+                    <button class="btn btn-success text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
+                      <h3 class="card-header bg-success">Entrenamiento del modelo</h3>
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseseven" class="collapse" aria-labelledby="headingseven" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <p>Se realiza un proceso de limpieza de datos en la base de datos inicial, ésta es dividida en un 70%
+                    de datos para aprendizaje y un 30% para prueba. Luego se procede a realizar el aprendizaje a través del
+                  modelo de red convulocional recurrente y utilizando el algoritmo de reajuste de pesos que creamos para así
+                obtener un modelo con un área bajo la curva mayor o igual a 99.6%.</p>
+                    <img src="/Users/admin/Fundacion_Dominguez_Batista/epsilon_beta_technologies/01_Proyectos/a1_covid_predictor/static/img/ag.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <!--/ 7 -->
+              <!-- 8 -->
+              <div class="card">
+                <div class="card-header" id="headingocho">
+                  <h2 class="mb-0">
+                    <button class="btn btn-success text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseocho" aria-expanded="false" aria-controls="collapseocho">
+                      <h3 class="card-header bg-success">Características de la Red Convolucional</h3>
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseocho" class="collapse" aria-labelledby="headingocho" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <img src="/Users/admin/Fundacion_Dominguez_Batista/epsilon_beta_technologies/01_Proyectos/a1_covid_predictor/static/img/ah.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <!--/ 8 -->
+            </div>
+          </div>
+          <!--/ Main Container -->
+
+          <!-- X container -->
+          <div class="container mb-2">
+              <div class="">
+                <img src="/Users/admin/Fundacion_Dominguez_Batista/epsilon_beta_technologies/01_Proyectos/a1_covid_predictor/static/img/ba.jpg" alt="" class="img-fluid">
+              </div>
+          </div>
+          <!--/ X container -->
+
+          <!-- <footer> -->
+          <div class="container d-flex justify-content-center">
+            <div class="cardX p-3 py-4 mt-4">
+              <div class="social-buttons mb-0 pb-0 justify-content-center align-items-center pt-4">
+                <p> síguenos a través de redes sociales para ver las últimas actualizaciones<p>
+                 <button class="neo-button"><i class="fa fa-facebook fa-2x"></i> </button>
+                 <button class="neo-button"><i class="fa fa-instagram fa-2x"></i></button>
+                 <button class="neo-button"><i class="fa fa-twitter fa-2x"></i> </button>
+                 <button class="neo-button"><i class="fa fa-youtube fa-2x"></i> </button>
+                 <button class="neo-button"><i class="fa fa-linkedin fa-2x"></i> </button>
+               </div>
+             </div>
+           </div>
+
+           <div class="p-3 pt-4 d-flex flex-column justify-content-center text-center mb-0">
+             <p>Copyright © 2020 | Dr. Saturnino Domínguez C | Todos los derechos reservados.</p>
+           </div>
+          <!-- /<footer> -->
+
+          <!-- JavaScript -->
+            <!-- JS, Popper.js, and jQuery -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+          <!--/ JavaScript -->
+  </body>
+</html>
